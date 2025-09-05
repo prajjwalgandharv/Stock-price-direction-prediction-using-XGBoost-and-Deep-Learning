@@ -1,6 +1,6 @@
 # Stock-price-direction-prediction-using-XGBoost-and-Deep-Learning
 Overview:
-This repository documents my end-to-end project in predicting short-term stock price movements using high-frequency limit order book (LOB) data from LOBSTER .
+This repository documents my end-to-end project in predicting short-term stock price movements using high-frequency limit order book (LOB) data from LOBSTER (https://lobsterdata.com/info/DataSamples.php), specifically the Amazon stock level 10 data on the linked webpage.
 The project progressed through four stages, starting with tree-based models and evolving into deep learning architectures, culminating in paper-faithful implementations of DeepLOB (Zhang et al.) and Tsantekidis et al.’s CNN-LSTM.
 
 The journey highlights both experimentation and refinement — beginning with my own CNN/LSTM architectures, and then moving toward reproducing academic models.
