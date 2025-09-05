@@ -7,6 +7,8 @@ The journey highlights both experimentation and refinement — beginning with my
 
 Project Progression
 
+(Note- the specified files need to be downloaded and unzipped in the same repo as the data above for the code to run)
+
 1. XGBoost Baseline – Feature Engineering + Tree Models
 
 Notebook: XGBOOST classification.ipynb
