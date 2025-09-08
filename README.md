@@ -14,13 +14,7 @@ Project Progression
 Notebook: XGBOOST classification.ipynb
 
 XGBOOST classification
-
-Engineered financial microstructure features:
-
-Spread, depth ratio, order book imbalance
-Rolling trade imbalance, cancel-to-add ratio
-Aggressive volume ratio, rolling mid-price change
-Rolling volatility, message rate, etc.
+Engineered financial microstructure features: Spread, depth ratio, order book imbalance, Rolling trade imbalance, cancel-to-add ratio, Aggressive volume ratio, rolling mid-price change, Rolling volatility, message rate, etc.
 
 Multiclass classification (up, down, neutral).
 
