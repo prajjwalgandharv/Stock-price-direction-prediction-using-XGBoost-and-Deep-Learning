@@ -5,7 +5,7 @@ The project progressed through four stages, starting with tree-based models and 
 
 The journey highlights both experimentation and refinement- beginning with my own CNN/LSTM architectures, and then moving toward reproducing academic models.
 
-Project Progression
+# Project Progression-: 
 
 (Note- the specified files need to be downloaded and unzipped in the same repo as the data above for the code to run)
 
