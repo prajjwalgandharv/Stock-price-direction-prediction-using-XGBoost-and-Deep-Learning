@@ -3,13 +3,13 @@ Overview:
 This repository documents my end-to-end project in predicting short-term stock price movements using high-frequency limit order book (LOB) data from LOBSTER (https://lobsterdata.com/info/DataSamples.php), specifically the Amazon stock level 10 data on the linked webpage.
 The project progressed through four stages, starting with tree-based models and evolving into deep learning architectures, culminating in paper-faithful implementations of DeepLOB (Zhang et al.) and Tsantekidis et al.’s CNN-LSTM.
 
-The journey highlights both experimentation and refinement — beginning with my own CNN/LSTM architectures, and then moving toward reproducing academic models.
+The journey highlights both experimentation and refinement- beginning with my own CNN/LSTM architectures, and then moving toward reproducing academic models.
 
 Project Progression
 
 (Note- the specified files need to be downloaded and unzipped in the same repo as the data above for the code to run)
 
-1. XGBoost Baseline – Feature Engineering + Tree Models
+1. XGBoost Baseline- Feature Engineering + Tree Models
 
 Notebook: XGBOOST classification.ipynb
 
@@ -30,7 +30,7 @@ Advanced tuning with Optuna.
 
 Key learning: XGBoost was interpretable and moderately effective, but struggled to capture temporal dependencies.
 
-2. Custom CNN – Raw LOB Data
+2. Custom CNN- Raw LOB Data
 
 Notebook: Price direction prediction with CNN.ipynb
 
@@ -40,7 +40,7 @@ Output: Binary/multiclass classification.
 
 Key learning: CNNs captured local spatial patterns, but performance plateaued without temporal modeling.
 
-3. Custom CNN-LSTM – Adding Temporal Dynamics
+3. Custom CNN-LSTM- Adding Temporal Dynamics
 
 Notebook: Price direction prediction with CNN and LSTM.ipynb
 Hybrid CNN → LSTM pipeline.
@@ -58,7 +58,7 @@ Tsantekidis CNN-LSTM (2017/2020): Stationary engineered features + Conv1D + BiLS
 Adopted paper-faithful event-based labeling (3-class: up, down, neutral).
 Training with 200 epochs, AdamW optimizer, cyclic learning rate.
 
-Key learning: Performance was limited by dataset size (single day of AMZN). Overfitting was expected — but architectures successfully reproduced, creating a scalable pipeline for larger datasets which is the next step in the project.
+Key learning: Performance was limited by dataset size (single day of AMZN). Overfitting was expected- but architectures successfully reproduced, creating a scalable pipeline for larger datasets which is the next step in the project.
 
 Data
 
