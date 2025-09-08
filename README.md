@@ -74,31 +74,22 @@ Engineered stationary features (as in Tsantekidis).
 Event-based labeling (future mid-price returns over horizon H, with tolerance α).
 
 Results (Summary)
-
 XGBoost: Solid baseline, interpretable features, 63% accuracy.
-
 Custom CNN: Captured spatial patterns but struggled with sequence prediction.
-
 Custom CNN-LSTM: Added temporal structure, moderate gains.
-
 DeepLOB / Tsantekidis Replication: Paper-faithful models built, but accuracy/F1 remained low due to limited dataset size.
 
 Key Takeaways
 
 Built full pipeline: data prep → feature engineering → model design → evaluation.
-
 Progressed from classical ML → custom DL → research replication.
-
 Learned the importance of event-based labeling, class balance, and dataset scale.
-
 Code is modular: easy to toggle between raw features vs engineered features, binary vs multiclass setups.
 
 Future Work
 
 Train on multi-day / multi-stock LOBSTER datasets (as in FI-2010, DeepLOB).
-
 Possibly extend beyond CNN-LSTM to other models, like transformers and graph-based models.
-
 Backtest trading strategies using predicted signals.
 
 References
