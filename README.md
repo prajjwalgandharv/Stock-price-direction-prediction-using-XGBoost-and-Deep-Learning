@@ -9,7 +9,7 @@ Project Progression
 
 (Note- the specified files need to be downloaded and unzipped in the same repo as the data above for the code to run)
 
-1. XGBoost Baseline- Feature Engineering + Tree Models
+## 1. XGBoost Baseline- Feature Engineering + Tree Models
 
 Notebook: XGBOOST classification.ipynb
 
@@ -30,7 +30,7 @@ Advanced tuning with Optuna.
 
 Key learning: XGBoost was interpretable and moderately effective, but struggled to capture temporal dependencies.
 
-2. Custom CNN- Raw LOB Data
+## 2. Custom CNN- Raw LOB Data
 
 Notebook: Price direction prediction with CNN.ipynb
 
@@ -40,7 +40,7 @@ Output: Binary/multiclass classification.
 
 Key learning: CNNs captured local spatial patterns, but performance plateaued without temporal modeling.
 
-3. Custom CNN-LSTM- Adding Temporal Dynamics
+## 3. Custom CNN-LSTM- Adding Temporal Dynamics
 
 Notebook: Price direction prediction with CNN and LSTM.ipynb
 Hybrid CNN → LSTM pipeline.
@@ -49,7 +49,7 @@ LSTM captured temporal dependencies across sequences.
 
 Key learning: Adding LSTM improved sequential awareness, but the architecture was hand-crafted, not optimized based on prior research.
 
-4. Paper-Faithful Replication – DeepLOB & Tsantekidis CNN-LSTM
+## 4. Paper-Faithful Replication – DeepLOB & Tsantekidis CNN-LSTM
 
 Notebook: Price direction prediction based on academic papers.ipynb
 Implemented research-accurate models:
@@ -60,39 +60,36 @@ Training with 200 epochs, AdamW optimizer, cyclic learning rate.
 
 Key learning: Performance was limited by dataset size (single day of AMZN). Overfitting was expected- but architectures successfully reproduced, creating a scalable pipeline for larger datasets which is the next step in the project.
 
-Data
+## Data
 
-Source: LOBSTER (sample files).
-
-Instrument: AMZN, June 21, 2012 (9:30–16:00 EST).
-
-Granularity: Level-10 LOB snapshots, ~270k events in one trading day.
-
+Source: LOBSTER (sample files)- AMZN, June 21, 2012 (9:30–16:00 EST).
+Level of detail: Level-10 LOB snapshots, ~270k events in one trading day.
 Preprocessing:
 Raw order book states.
 Engineered stationary features (as in Tsantekidis).
 Event-based labeling (future mid-price returns over horizon H, with tolerance α).
 
-Results (Summary)
+## Results (Summary)
+
 XGBoost: Solid baseline, interpretable features, 63% accuracy.
 Custom CNN: Captured spatial patterns but struggled with sequence prediction.
 Custom CNN-LSTM: Added temporal structure, moderate gains.
 DeepLOB / Tsantekidis Replication: Paper-faithful models built, but accuracy/F1 remained low due to limited dataset size.
 
-Key Takeaways
+## Key Takeaways
 
 Built full pipeline: data prep → feature engineering → model design → evaluation.
 Progressed from classical ML → custom DL → research replication.
 Learned the importance of event-based labeling, class balance, and dataset scale.
 Code is modular: easy to toggle between raw features vs engineered features, binary vs multiclass setups.
 
-Future Work
+## Future Work
 
 Train on multi-day / multi-stock LOBSTER datasets (as in FI-2010, DeepLOB).
 Possibly extend beyond CNN-LSTM to other models, like transformers and graph-based models.
 Backtest trading strategies using predicted signals.
 
-References
+## References
 
 Zhang, Z., Zohren, S., & Roberts, S. (2018). DeepLOB: Deep convolutional neural networks for limit order books. IEEE TSP.
 
