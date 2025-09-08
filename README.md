@@ -75,7 +75,7 @@ DeepLOB / Tsantekidis Replication: Paper-faithful models built, but accuracy/F1 
 Built full pipeline: data prep → feature engineering → model design → evaluation.
 Progressed from classical ML → custom DL → research replication.
 Learned the importance of event-based labeling, class balance, and dataset scale.
-Code is modular: easy to toggle between raw features vs engineered features, binary vs multiclass setups.
+Code makes it easy to toggle between raw features vs engineered features.
 
 ## Future Work
 
