@@ -1,9 +1,8 @@
 # Stock-price-direction-prediction-using-XGBoost-and-Deep-Learning
-Overview:
-This repository documents my end-to-end project in predicting short-term stock price movements using high-frequency limit order book (LOB) data from LOBSTER (https://lobsterdata.com/info/DataSamples.php), specifically the Amazon stock level 10 data on the linked webpage.
-The project progressed through four stages, starting with tree-based models and evolving into deep learning architectures, culminating in paper-faithful implementations of DeepLOB (Zhang et al.) and Tsantekidis et al.’s CNN-LSTM.
+This repository documents my project in predicting short-term stock price movements using high-frequency limit order book (LOB) data from LOBSTER (https://lobsterdata.com/info/DataSamples.php), specifically the Amazon stock level 10 data on the linked webpage.
+The project progressed through four stages, starting with tree-based models and evolving into deep learning architectures, eventually going to paper-based implementations of DeepLOB (Zhang et al.) and Tsantekidis et al.’s CNN-LSTM.
 
-The journey highlights both experimentation and refinement- beginning with my own CNN/LSTM architectures, and then moving toward reproducing academic models. **Due to limited available free LOB data from US stock markets to be used for training, accuracy remained limited**. **Exploring options to get more such data**.
+The project's development highlights iterative experimentation and refinement- beginning with my own CNN/LSTM architectures, and then moving toward reproducing academic models. **Due to limited available free LOB data from US stock markets to be used for training, accuracy remained limited**. **Exploring options to get more such data**.
 
 # Project Progression-: 
 
@@ -22,7 +21,7 @@ Models:
 Initial XGBoost classifier.
 Advanced tuning with Optuna.
 
-Key learning: XGBoost was interpretable and moderately effective, but struggled to capture temporal dependencies.
+Key learning: XGBoost was moderately effective.
 
 ## 2. Custom CNN- Raw LOB Data
 
@@ -34,16 +33,16 @@ Output: Binary/multiclass classification.
 
 Key learning: CNNs captured local spatial patterns, but performance plateaued without temporal modeling.
 
-## 3. Custom CNN-LSTM- Adding Temporal Dynamics
+## 3. Custom CNN-LSTM- Adding Time Dynamics
 
 Notebook: Price direction prediction with CNN and LSTM.ipynb
-Hybrid CNN → LSTM pipeline.
+Hybrid CNN to LSTM pipeline.
 CNN layers extracted spatial/structural features from the LOB.
 LSTM captured temporal dependencies across sequences.
 
 Key learning: Adding LSTM improved sequential awareness, but the architecture was hand-crafted, not optimized based on prior research.
 
-## 4. Paper-Faithful Replication – DeepLOB & Tsantekidis CNN-LSTM
+## 4. Paper-based Replication – DeepLOB & Tsantekidis CNN-LSTM
 
 Notebook: Price direction prediction based on academic papers.ipynb
 Implemented research-accurate models:
@@ -72,8 +71,8 @@ DeepLOB / Tsantekidis Replication: Paper-faithful models built, but accuracy/F1 
 
 ## Key Takeaways
 
-Built full pipeline: data prep → feature engineering → model design → evaluation.
-Progressed from classical ML → custom DL → research replication.
+Built full pipeline: data prep -> feature engineering -> model design -> evaluation.
+Progressed from classical ML -> Custom deep learning ->research replication.
 Learned the importance of event-based labeling, class balance, and dataset scale.
 Code makes it easy to toggle between raw features vs engineered features.
 
