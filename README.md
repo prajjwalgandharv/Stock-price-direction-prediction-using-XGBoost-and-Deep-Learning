@@ -1,5 +1,5 @@
 # Stock-price-direction-prediction-using-XGBoost-and-Deep-Learning
-This repository documents my project in predicting short-term stock price movements using high-frequency limit order book (LOB) data from LOBSTER (https://lobsterdata.com/info/DataSamples.php), specifically the Amazon stock level 10 data on the linked webpage.
+This repository documents my project predicting short-term stock price movements using high-frequency limit order book (LOB) data from LOBSTER (https://lobsterdata.com/info/DataSamples.php), specifically the Amazon stock level 10 data on the linked webpage.
 The project progressed through four stages, starting with tree-based models and evolving into deep learning architectures, eventually going to paper-based implementations of DeepLOB (Zhang et al.) and Tsantekidis et al.’s CNN-LSTM.
 
 The project's development highlights iterative experimentation and refinement- beginning with my own CNN/LSTM architectures, and then moving toward reproducing academic models. **Due to limited available free LOB data from US stock markets to be used for training, accuracy remained limited**. **Exploring options to get more such data**.
@@ -37,10 +37,10 @@ Key learning: CNNs captured local spatial patterns, but performance plateaued wi
 
 Notebook: Price direction prediction with CNN and LSTM.ipynb
 Hybrid CNN to LSTM pipeline.
-CNN layers extracted spatial/structural features from the LOB.
-LSTM captured temporal dependencies across sequences.
+CNN layers extracted features from the LOB.
+LSTM captured time-based dependencies.
 
-Key learning: Adding LSTM improved sequential awareness, but the architecture was hand-crafted, not optimized based on prior research.
+Key learning: Adding LSTM improved performance, but the architecture was hand-crafted, not based on prior research.
 
 ## 4. Paper-based Replication – DeepLOB & Tsantekidis CNN-LSTM
 
@@ -65,9 +65,9 @@ Event-based labeling (future mid-price returns over horizon H, with tolerance α
 ## Results (Summary)
 
 XGBoost: Solid baseline, interpretable features, 63% accuracy.
-Custom CNN: Captured spatial patterns but struggled with sequence prediction.
+Custom CNN: Captured patterns but struggled with sequence prediction.
 Custom CNN-LSTM: Added temporal structure, moderate gains.
-DeepLOB / Tsantekidis Replication: Paper-faithful models built, but accuracy/F1 remained low due to limited dataset size.
+DeepLOB / Tsantekidis Replication: Paper-based models built, but accuracy/F1 remained low due to limited dataset size.
 
 ## Key Takeaways
 
